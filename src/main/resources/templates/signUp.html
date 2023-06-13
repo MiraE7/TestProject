@@ -35,7 +35,7 @@
         </div>
       </div>
     <center> <h1> Create new account </h1> </center>   
-    <form action="#" method="post">  
+    <form th:action="@{/registerAcc}" method="post" modelAttribute="register" >  
         <div class="container">   
             <label>Username : </label>   
             <input type="text" placeholder="Enter Username" name="username" required>  
