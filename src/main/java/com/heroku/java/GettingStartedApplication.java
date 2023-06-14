@@ -53,7 +53,7 @@ public class GettingStartedApplication {
                   session.setAttribute("name", user.getName());
                   session.setAttribute("email", email);
                   session.setAttribute("userID", userID);
-                  returnPage = "redirect:/dashboard";
+                  returnPage = "redirect:/";
                   break;
                 }else{
                     returnPage = "index";
@@ -74,7 +74,7 @@ public class GettingStartedApplication {
     @GetMapping("/signUp")
     public String signUp() {
         return "signUp";
-    }
+    }   
 
     @GetMapping("/database")
     String database(Map<String, Object> model) {
