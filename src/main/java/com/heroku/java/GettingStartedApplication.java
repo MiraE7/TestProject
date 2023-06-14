@@ -59,7 +59,7 @@ public class GettingStartedApplication {
                     returnPage = "index";
                 }
             }
-            return "login"; 
+            return "/"; 
     }catch (Throwable t) {
         System.out.println("message : " + t.getMessage());
         return "index";
