@@ -1,13 +1,53 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'db')}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer List</title>
+    <link rel="stylesheet" type="text/css" href="CustList.css">
+</head>
 <body>
+    <header>
+        <h1>Cempaka Laundry</h1>
+        <div class="logo">
+        <img src="img/laundryGirl.png" alt="logo" width="80" height="auto" >
+        </div>
+      </header>
 
-<div class="container">
-    <h1>Database Output</h1>
-    <ul th:each="record : ${records}">
-        <li th:text="${record}"/>
-    </ul>
-</div>
+      <span style="font-size:30px;cursor:pointer", onclick="openNav()">&#9776; menu</span>
 
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/LoginLaundry/Login.html">HOME</a>
+          <a href="/CustRecord/CustRecord.html">CUSTOMER</a>
+          <a href="/createorder/OrderLaundry.html">CREATE ORDER</a>
+          <a href="/OrderList/OrderList.html">ORDER LIST</a>
+          
+        </div>
+
+      <main>
+        
+        <h2>Customer List</h2>
+    
+    
+        <table border=" solid 5px black">
+            <tr>
+               
+                <th>Customer Name</th>
+                <th>Customer Phone Number</th>
+                <th>Action</th>
+              
+
+
+            </tr>
+
+        </table>
+
+
+
+
+      </main>
 </body>
+
+<script src="CustList.js" ></script>
 </html>
